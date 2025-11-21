@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — George Oikonomou</title>
+  <meta name="description" content="Selected projects by George Oikonomou — web apps, tools and AI automations.">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
+        <a class="logo" href="index.html">George Oikonomou</a>
+      </div>
+      <nav class="menu" id="menu">
+        <a class="menu-item" href="index.html">About me</a>
+        <a class="menu-item active" href="projects.html">Projects</a>
+        <a class="menu-item" href="skills.html">Skills</a>
+        <a class="menu-item" href="education.html">Education</a>
+        <a class="menu-item" href="contact.html">Contact</a>
+      </nav>
+      <div class="sidebar-footer">
+        <label for="switch" class="toggle" title="Toggle theme">
+          <input type="checkbox" class="input" id="switch" />
+          <div class="icon icon--moon">🌙</div>
+          <div class="icon icon--sun">☀️</div>
+        </label>
+        <div class="socials">
+          <a class="soc linkedin" href="https://www.linkedin.com/in/giorgos-oikonomoy-045671351/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a class="soc github" href="https://github.com/giorgosdata" aria-label="GitHub"><i class="fa fa-github"></i></a>
+          <a class="soc instagram" href="https://www.instagram.com/coderaii/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p class="tiny">© <span id="year"></span> George Oikonomou</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="projects" class="section">
+        <div class="wrap">
+          <h1 class="title">Projects</h1>
+          <p class="lead">
+            A selection of my recent work. Want to see more?
+            <a href="https://github.com/giorgosdata" target="_blank" rel="noopener noreferrer" class="link">
+              Visit my GitHub profile
+            </a>.
+          </p>
+
+          <!-- MAIN PROJECT GRID -->
+          <div class="grid" style="gap:24px; margin-top:24px" id="projectsGrid">
+            <!-- Project 1 -->
+            <a href="https://giorgosdata.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="card" data-tags="javascript productivity ui">
+              <div class="thumb">
+                <img src="todo.png" alt="Screenshot of To-Do List App">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">To-Do List App</h3>
+                <p class="card-description">
+                  A clean and minimal to-do list application built with HTML, CSS and JavaScript.
+                  Focused on keyboard shortcuts and quick task management.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 2 -->
+            <a href="https://giorgosdata.github.io/calculator/" target="_blank" rel="noopener noreferrer" class="card" data-tags="javascript calculator">
+              <div class="thumb">
+                <img src="cal.png" alt="Screenshot of Calculator app">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Calculator</h3>
+                <p class="card-description">
+                  Simple calculator with keyboard support and responsive layout, built in vanilla JavaScript.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 3 -->
+            <a href="https://giorgosdata.github.io/weather-converter/" target="_blank" rel="noopener noreferrer" class="card" data-tags="javascript api weather">
+              <div class="thumb">
+                <img src="convert.png" alt="Screenshot of Weather Converter">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Weather Converter</h3>
+                <p class="card-description">
+                  A small tool that converts temperatures between Celsius and Fahrenheit with a clean UI.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 4 -->
+            <a href="https://giorgosdata.github.io/calculator-with-24-/" target="_blank" rel="noopener noreferrer" class="card" data-tags="javascript vat calculator">
+              <div class="card-content">
+                <h3 class="card-title">Calculator with 24% VAT</h3>
+                <p class="card-description">
+                  Calculator focused on Greek VAT (24%) — useful for quick pricing and invoice preparation.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 5 -->
+            <a href="https://giorgosdata.github.io/interval/" target="_blank" rel="noopener noreferrer" class="card" data-tags="timer javascript ui">
+              <div class="card-content">
+                <h3 class="card-title">Timer</h3>
+                <p class="card-description">
+                  A simple timer with start/stop/reset, built to practice state handling in JavaScript.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 6 -->
+            <a href="https://giorgosdata.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="card" data-tags="portfolio html css">
+              <div class="thumb">
+                <img src="portfolio.png" alt="Screenshot of previous portfolio website">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Previous Portfolio</h3>
+                <p class="card-description">
+                  An earlier version of my portfolio website showcasing projects and experiments.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 7 -->
+            <a href="https://giorgosdata.github.io/seacon.gr/" target="_blank" rel="noopener noreferrer" class="card" data-tags="gsap horizontal-scroll landing-page">
+              <div class="thumb">
+                <img src="seacon.png" alt="Screenshot of Seacon landing page">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Seacon Landing Page</h3>
+                <p class="card-description">
+                  A website for an oil tanker company with horizontal scroll and animated counters using GSAP.
+                </p>
+              </div>
+            </a>
+
+            <!-- Project 8 -->
+            <a href="https://giorgosdata.github.io/fruiton/" target="_blank" rel="noopener noreferrer" class="card" data-tags="gsap landing-page ui">
+              <div class="thumb">
+                <img src="fruiton.png" alt="Screenshot of Fruiton product website">
+              </div>
+              <div class="card-content">
+                <h3 class="card-title">Fruiton Website</h3>
+                <p class="card-description">
+                  A playful product page about strawberries with horizontal scroll and smooth GSAP animations.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <hr class="divider">
+
+          <!-- AI / AUTOMATION PROJECTS (NO PUBLIC LINKS) -->
+          <div class="ai" style="text-align:center; margin-top:24px">
+            <h3 class="section-title">AI & Automation Projects</h3>
+            <div class="divider" style="margin: 12px auto"></div>
+            <p class="lead">Some projects are client work or experiments that are not public, but showcase what I enjoy building.</p>
+
+            <div class="Projects" style="gap:16px; margin-top:16px">
+              <div class="card">
+                <div class="card-body">
+                  <h3>Gmail Auto-Reply Agent</h3>
+                  <p class="description">
+                    An AI agent that reads incoming emails, classifies them and sends automatic replies.
+                    It can also propose meeting times and create calendar events.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h3>AI Discord Bot</h3>
+                  <p class="description">
+                    A Discord bot that posts daily football predictions at a specific time, using AI models and external APIs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <h3>AI Caller</h3>
+                  <p class="description">
+                    An AI voice agent that answers a company phone line, handles FAQs and can book appointments automatically.
+                  </p>
+                </div>
+              </div>
+
+              <p class="lead more-coming">More projects coming soon...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+</body>
+</html>

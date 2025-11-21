@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education — George Oikonomou</title>
+  <meta name="description" content="Education timeline and learning journey of George Oikonomou.">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <button class="burger" id="burger" aria-label="Toggle menu">☰</button>
+        <a class="logo" href="index.html">George Oikonomou</a>
+      </div>
+      <nav class="menu" id="menu">
+        <a class="menu-item" href="index.html">About me</a>
+        <a class="menu-item" href="projects.html">Projects</a>
+        <a class="menu-item" href="skills.html">Skills</a>
+        <a class="menu-item" href="education.html" aria-current="page">Education</a>
+        <a class="menu-item" href="contact.html">Contact</a>
+      </nav>
+      <div class="sidebar-footer">
+        <label for="switch" class="toggle" title="Toggle theme">
+          <input type="checkbox" class="input" id="switch" />
+          <div class="icon icon--moon">🌙</div>
+          <div class="icon icon--sun">☀️</div>
+        </label>
+        <div class="socials">
+          <a class="soc linkedin" href="https://www.linkedin.com/in/giorgos-oikonomoy-045671351/" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          <a class="soc github" href="https://github.com/giorgosdata" aria-label="GitHub"><i class="fa fa-github"></i></a>
+          <a class="soc instagram" href="https://www.instagram.com/coderaii/" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p class="tiny">© <span id="year"></span> George Oikonomou</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section id="education" class="section">
+        <div class="wrap">
+          <h1 class="title">My Education</h1>
+          <p class="lead">A quick overview of how I grew into development.</p>
+          <hr>
+
+          <div class="education-item">
+            <h3 class="education-degree">2021 — First contact with code</h3>
+            <span class="education-institution">High School</span>
+            <p class="education-description">
+              I discovered programming in high school and started playing with HTML, CSS and basic JavaScript.
+              This is where I realised I enjoy building things on the web.
+            </p>
+          </div>
+          <hr>
+
+          <div class="education-item">
+            <h3 class="education-degree">2022 — Self-taught foundations</h3>
+            <span class="education-institution">Independent study</span>
+            <p class="education-description">
+              I continued learning on my own through online resources and small projects.
+              I focused on strengthening my HTML, CSS and JavaScript skills by building mini-apps.
+            </p>
+          </div>
+          <hr>
+
+          <div class="education-item">
+            <h3 class="education-degree">2023 — High School graduation</h3>
+            <span class="education-institution">High School</span>
+            <p class="education-description">
+              I graduated from high school and decided to continue my studies in web development, design and game development.
+            </p>
+          </div>
+          <hr>
+
+          <div class="education-item">
+            <h3 class="education-degree">2024 — First year of college</h3>
+            <span class="education-institution">Web Development & Programming</span>
+            <p class="education-description">
+              I deepened my knowledge of HTML, CSS and JavaScript and also learned Python, PHP, MySQL, C and C++.
+              It was the first time I worked on more structured projects and I really enjoyed it.
+            </p>
+          </div>
+          <hr>
+
+          <div class="education-item">
+            <h3 class="education-degree">Present — Final year & real projects</h3>
+            <span class="education-institution">Current studies</span>
+            <p class="education-description">
+              I’m now in my last year, working on real projects for clients and taking on more complex responsibilities:
+              GSAP-powered websites, React, AI integrations and automation workflows.  
+              My goal is to keep improving and deliver high-quality work for every client I collaborate with.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
+  <script src="script.js" defer></script>
+</body>
+</html>
