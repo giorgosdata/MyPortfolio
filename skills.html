@@ -47,86 +47,101 @@
     </aside>
 
     <main class="content">
-      <section class="skills-showcase">
-
+     <section class="skills-showcase">
   <h1 class="skills-title">Skills</h1>
   <p class="skills-sub">
     Tools & technologies I use to build cinematic, interactive and scalable experiences.
   </p>
 
-  <div class="skills-grid">
+  <div class="skills-layout">
+    <!-- LEFT: Skills grid -->
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Frontend</h3>
+        <div class="skill-tags">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span>
+          <span>React.js</span><span>Next.js</span><span>Three.js</span><span>GSAP</span>
+        </div>
+      </div>
 
-    <div class="skill-card">
-      <h3>Frontend</h3>
-      <div class="skill-tags">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>TypeScript</span>
-        <span>React.js</span>
-        <span>Next.js</span>
-        <span>Three.js</span>
-        <span>GSAP</span>
+      <div class="skill-card">
+        <h3>Backend</h3>
+        <div class="skill-tags">
+          <span>FastAPI</span><span>Django</span><span>PHP</span><span>MySQL</span><span>Python</span><span>JSON</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Programming Languages</h3>
+        <div class="skill-tags">
+          <span>Java</span><span>C</span><span>C++</span><span>Python</span><span>JavaScript</span><span>Lua</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>3D / Game</h3>
+        <div class="skill-tags">
+          <span>Blender</span><span>Unreal Engine</span><span>Pygame</span><span>Roblox</span><span>Three.js</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Automation / AI</h3>
+        <div class="skill-tags">
+          <span>n8n</span><span>AI Tools</span><span>Agents</span><span>Workflows</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h3>Creative</h3>
+        <div class="skill-tags">
+          <span>Photo Editing</span><span>GIMP</span><span>Video Editing</span><span>Shotcut</span>
+        </div>
       </div>
     </div>
 
-    <div class="skill-card">
-      <h3>Backend</h3>
-      <div class="skill-tags">
-        <span>FastAPI</span>
-        <span>Django</span>
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>Python</span>
-        <span>JSON</span>
-      </div>
-    </div>
+    <!-- RIGHT: Capabilities card -->
+    <div class="skills-side card">
+      <h3 class="card-title">Capabilities</h3>
+      <p class="card-description" style="margin-top:8px">
+        What I like building the most (the stuff that feels “premium”).
+      </p>
 
-    <div class="skill-card">
-      <h3>Programming Languages</h3>
-      <div class="skill-tags">
-        <span>Java</span>
-        <span>C</span>
-        <span>C++</span>
-        <span>Python</span>
-        <span>JavaScript</span>
-        <span>Lua</span>
-      </div>
-    </div>
+      <div class="caps">
+        <div class="cap">
+          <div class="capTop">
+            <span class="capTitle">Interactive landings</span>
+            <span class="capTag">UI + Motion</span>
+          </div>
+          <div class="capBody">Hero sections with scroll reveals, clean hierarchy and conversion-first structure.</div>
+        </div>
 
-    <div class="skill-card">
-      <h3>3D / Game</h3>
-      <div class="skill-tags">
-        <span>Blender</span>
-        <span>Unreal Engine</span>
-        <span>Pygame</span>
-        <span>Roblox</span>
-        <span>Three.js</span>
-      </div>
-    </div>
+        <div class="cap">
+          <div class="capTop">
+            <span class="capTitle">3D showcases</span>
+            <span class="capTag">WebGL</span>
+          </div>
+          <div class="capBody">Cinematic lighting, particles, fog, and lightweight effects without killing performance.</div>
+        </div>
 
-    <div class="skill-card">
-      <h3>Automation / AI</h3>
-      <div class="skill-tags">
-        <span>n8n</span>
-        <span>AI Tools</span>
-        <span>FastAPI</span>
-        <span>Agents</span>
+        <div class="cap">
+          <div class="capTop">
+            <span class="capTitle">AI automations</span>
+            <span class="capTag">Agents</span>
+          </div>
+          <div class="capBody">Bots/agents that read, classify and automate workflows (email, reminders, etc.).</div>
+        </div>
       </div>
-    </div>
 
-    <div class="skill-card">
-      <h3>Creative</h3>
-      <div class="skill-tags">
-        <span>Photo Editing</span>
-        <span>GIMP</span>
-        <span>Video Editing</span>
-        <span>Shotcut</span>
-      </div>
-    </div>
+      <div class="divider" style="margin-top:16px"></div>
 
+      <p class="lead" style="margin-top:12px">
+        Want a custom interactive landing? <a class="link" href="contact.html">Let’s talk</a>.
+      </p>
+    </div>
   </div>
 </section>
+
 
             <!-- Right: capability blocks -->
             <div class="card" style="padding:18px">
@@ -177,6 +192,7 @@
   <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
 </body>
 </html>
+
 
 
 
