@@ -246,16 +246,43 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Skills meter reveal (safe)
+// Skill tabs
 (() => {
-  const meters = document.querySelectorAll(".meter");
-  if (!meters.length) return;
+  const tabs = document.querySelectorAll(".tab");
+  const panels = document.querySelectorAll(".skillsGrid");
+  if (!tabs.length || !panels.length) return;
 
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add("on");
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const key = tab.getAttribute("data-tab");
+
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      panels.forEach(p => {
+        p.classList.toggle("active", p.getAttribute("data-panel") === key);
+      });
     });
-  }, { threshold: 0.25 });
-
-  meters.forEach(m => io.observe(m));
+  });
 })();
+
+// Nice hover tilt (subtle)
+(() => {
+  const cards = document.querySelectorAll(".skillCard");
+  if (!cards.length) return;
+
+  cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+      const r = card.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      card.style.transform = `translateY(-4px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*5).toFixed(2)}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "";
+    });
+  });
+})();
+
+
