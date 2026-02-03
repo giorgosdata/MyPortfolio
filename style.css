@@ -1279,3 +1279,13 @@ a { color:inherit; text-decoration:none; }
   font-size:13px;
   border:1px solid rgba(255,255,255,0.08);
 }
+
+/* More breathing room at the bottom of the Skills section */
+#skills{
+  padding-bottom: 120px;
+}
+
+/* If your skills wrapper has a class like .skills-wrap or .skills-grid */
+.skills-grid{
+  margin-bottom: 60px;
+}
