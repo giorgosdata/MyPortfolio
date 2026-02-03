@@ -47,173 +47,87 @@
     </aside>
 
     <main class="content">
-      <section id="skills" class="section">
-        <div class="wrap">
-          <h1 class="title">Skills</h1>
-          <p class="lead">
-            What I’m best at — focused on building fast, clean and interactive web experiences.
-          </p>
+      <section class="skills-showcase">
 
-          <div class="grid" style="gap:24px; margin-top:24px">
-            <!-- Left: meters -->
-            <div class="card" style="padding:18px">
- <section class="section" id="skills-stack">
-  <div class="wrap">
-    <h1 class="title">Skills</h1>
-    <p class="lead">
-      A clean stack view — fast to scan, easy to expand. Click to pin your best ones.
-    </p>
+  <h1 class="skills-title">Skills</h1>
+  <p class="skills-sub">
+    Tools & technologies I use to build cinematic, interactive and scalable experiences.
+  </p>
 
-    <div class="skillToolbar">
-      <div class="skillSearch">
-        <span class="skillSearchIcon">⌕</span>
-        <input id="skillSearch" type="text" placeholder="Search skills (e.g. three, python, react)" />
-      </div>
+  <div class="skills-grid">
 
-      <div class="skillFilters" id="skillFilters">
-        <button class="filter active" data-filter="all" type="button">All</button>
-        <button class="filter" data-filter="frontend" type="button">Front-end</button>
-        <button class="filter" data-filter="backend" type="button">Back-end</button>
-        <button class="filter" data-filter="3d" type="button">3D / Game</button>
-        <button class="filter" data-filter="lang" type="button">Languages</button>
-        <button class="filter" data-filter="tools" type="button">Tools</button>
-        <button class="filter" data-filter="creative" type="button">Creative</button>
+    <div class="skill-card">
+      <h3>Frontend</h3>
+      <div class="skill-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>TypeScript</span>
+        <span>React.js</span>
+        <span>Next.js</span>
+        <span>Three.js</span>
+        <span>GSAP</span>
       </div>
     </div>
 
-    <div class="pinnedRow" id="pinnedRow">
-      <div class="pinnedTitle">Pinned</div>
-      <div class="pinnedList" id="pinnedList"></div>
+    <div class="skill-card">
+      <h3>Backend</h3>
+      <div class="skill-tags">
+        <span>FastAPI</span>
+        <span>Django</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>Python</span>
+        <span>JSON</span>
+      </div>
     </div>
 
-    <div class="skillBento" id="skillBento">
-
-      <!-- FRONT-END -->
-<article class="skillGroup" data-group="frontend">
-  <div class="skillGroupTop">
-    <h3>Front-end</h3>
-    <span class="skillGroupMeta">UI • Web Apps • Motion</span>
-  </div>
-  <div class="skillChips">
-    <button class="chip" data-skill="HTML" data-tags="html frontend">HTML</button>
-    <button class="chip" data-skill="CSS" data-tags="css frontend">CSS</button>
-    <button class="chip" data-skill="JavaScript" data-tags="javascript js frontend">JavaScript</button>
-    <button class="chip" data-skill="TypeScript" data-tags="typescript ts frontend">TypeScript</button>
-    <button class="chip" data-skill="React.js" data-tags="react reactjs frontend">React.js</button>
-    <button class="chip" data-skill="Next.js" data-tags="next nextjs frontend">Next.js</button>
-    <button class="chip" data-skill="Three.js" data-tags="three threejs webgl 3d frontend">Three.js</button>
-    <button class="chip" data-skill="GSAP" data-tags="gsap motion frontend">GSAP</button>
-  </div>
-</article>
-
-<!-- LANGUAGES -->
-<article class="skillGroup" data-group="lang">
-  <div class="skillGroupTop">
-    <h3>Languages</h3>
-    <span class="skillGroupMeta">Programming languages</span>
-  </div>
-  <div class="skillChips">
-    <button class="chip" data-skill="Java" data-tags="java lang">Java</button>
-    <button class="chip" data-skill="C" data-tags="c lang">C</button>
-    <button class="chip" data-skill="C++" data-tags="cpp c++ lang">C++</button>
-    <button class="chip" data-skill="Python" data-tags="python lang backend">Python</button>
-    <button class="chip" data-skill="PHP" data-tags="php lang backend">PHP</button>
-    <button class="chip" data-skill="Lua" data-tags="lua lang roblox">Lua</button>
-  </div>
-</article>
-
-      
-      <!-- FRONT-END -->
-      <article class="skillGroup" data-group="frontend">
-        <div class="skillGroupTop">
-          <h3>Front-end</h3>
-          <span class="skillGroupMeta">UI • Web Apps • Motion</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="HTML" data-tags="html frontend">HTML</button>
-          <button class="chip" data-skill="CSS" data-tags="css frontend">CSS</button>
-          <button class="chip" data-skill="JavaScript" data-tags="javascript js frontend">JavaScript</button>
-          <button class="chip" data-skill="TypeScript" data-tags="typescript ts frontend">TypeScript</button>
-          <button class="chip" data-skill="React.js" data-tags="react reactjs frontend">React.js</button>
-          <button class="chip" data-skill="Next.js" data-tags="next nextjs frontend">Next.js</button>
-          <button class="chip" data-skill="Three.js" data-tags="three threejs webgl 3d frontend">Three.js</button>
-          <button class="chip" data-skill="GSAP" data-tags="gsap motion frontend">GSAP</button>
-        </div>
-      </article>
-
-      <!-- BACK-END -->
-      <article class="skillGroup" data-group="backend">
-        <div class="skillGroupTop">
-          <h3>Back-end</h3>
-          <span class="skillGroupMeta">APIs • Databases</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="FastAPI" data-tags="fastapi python backend api">FastAPI</button>
-          <button class="chip" data-skill="Django" data-tags="django python backend">Django</button>
-          <button class="chip" data-skill="PHP" data-tags="php backend">PHP</button>
-          <button class="chip" data-skill="MySQL" data-tags="mysql database backend">MySQL</button>
-          <button class="chip" data-skill="JSON" data-tags="json backend frontend">JSON</button>
-        </div>
-      </article>
-
-      <!-- LANGUAGES -->
-      <article class="skillGroup" data-group="lang">
-        <div class="skillGroupTop">
-          <h3>Languages</h3>
-          <span class="skillGroupMeta">Programming languages</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="Python" data-tags="python lang backend">Python</button>
-          <button class="chip" data-skill="Java" data-tags="java lang">Java</button>
-          <button class="chip" data-skill="C" data-tags="c lang">C</button>
-          <button class="chip" data-skill="C++" data-tags="cpp c++ lang">C++</button>
-          <button class="chip" data-skill="Lua" data-tags="lua lang roblox">Lua</button>
-        </div>
-      </article>
-
-      <!-- 3D / GAME -->
-      <article class="skillGroup" data-group="3d">
-        <div class="skillGroupTop">
-          <h3>3D / Game</h3>
-          <span class="skillGroupMeta">Engines • Tools • Experiments</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="Blender" data-tags="blender 3d creative">Blender</button>
-          <button class="chip" data-skill="Unreal Engine" data-tags="unreal engine 3d game">Unreal Engine</button>
-          <button class="chip" data-skill="Pygame" data-tags="pygame python game">Pygame</button>
-          <button class="chip" data-skill="Roblox" data-tags="roblox game">Roblox</button>
-        </div>
-      </article>
-
-      <!-- TOOLS -->
-      <article class="skillGroup" data-group="tools">
-        <div class="skillGroupTop">
-          <h3>Automation / Tools</h3>
-          <span class="skillGroupMeta">Workflows • Productivity</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="n8n" data-tags="n8n automation tools">n8n</button>
-          <button class="chip" data-skill="AI Tools" data-tags="ai tools automation">AI Tools</button>
-        </div>
-      </article>
-
-      <!-- CREATIVE -->
-      <article class="skillGroup" data-group="creative">
-        <div class="skillGroupTop">
-          <h3>Creative</h3>
-          <span class="skillGroupMeta">Editing • Content</span>
-        </div>
-        <div class="skillChips">
-          <button class="chip" data-skill="Photo Editing" data-tags="photo editing creative">Photo Editing</button>
-          <button class="chip" data-skill="GIMP" data-tags="gimp photo editing creative">GIMP</button>
-          <button class="chip" data-skill="Video Editing" data-tags="video editing creative">Video Editing</button>
-          <button class="chip" data-skill="Shotcut" data-tags="shotcut video editing creative">Shotcut</button>
-        </div>
-      </article>
-
+    <div class="skill-card">
+      <h3>Programming Languages</h3>
+      <div class="skill-tags">
+        <span>Java</span>
+        <span>C</span>
+        <span>C++</span>
+        <span>Python</span>
+        <span>JavaScript</span>
+        <span>Lua</span>
+      </div>
     </div>
+
+    <div class="skill-card">
+      <h3>3D / Game</h3>
+      <div class="skill-tags">
+        <span>Blender</span>
+        <span>Unreal Engine</span>
+        <span>Pygame</span>
+        <span>Roblox</span>
+        <span>Three.js</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Automation / AI</h3>
+      <div class="skill-tags">
+        <span>n8n</span>
+        <span>AI Tools</span>
+        <span>FastAPI</span>
+        <span>Agents</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <h3>Creative</h3>
+      <div class="skill-tags">
+        <span>Photo Editing</span>
+        <span>GIMP</span>
+        <span>Video Editing</span>
+        <span>Shotcut</span>
+      </div>
+    </div>
+
   </div>
 </section>
+
 
 
             <!-- Right: capability blocks -->
