@@ -815,3 +815,113 @@ a { color:inherit; text-decoration:none; }
 .menu-item[aria-current="page"] {
   background: color-mix(in oklab, var(--accent), transparent 86%);
 }
+
+/* ================== Skills Meters (SaaS style) ================== */
+.skillsMeters{
+  display:grid;
+  gap:14px;
+  grid-template-columns: 1fr;
+  margin-top: 14px;
+}
+
+.meter{
+  border:1px solid var(--border);
+  background: var(--panel);
+  border-radius:16px;
+  padding:14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+
+[data-theme="dark"] .meter{
+  box-shadow: 0 10px 26px rgba(0,0,0,.35);
+}
+
+.meterTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+
+.meterLabel{
+  font-weight:700;
+  letter-spacing:.2px;
+}
+
+.meterValue{
+  font-family: 'Roboto Mono', monospace;
+  font-weight:700;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.meterTrack{
+  height:10px;
+  border-radius:999px;
+  overflow:hidden;
+  position:relative;
+  background: color-mix(in oklab, var(--text), transparent 92%);
+}
+
+[data-theme="dark"] .meterTrack{
+  background: rgba(255,255,255,.14);
+}
+
+.meterFill{
+  display:block;
+  height:100%;
+  width: 0%;
+  border-radius:999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  transition: width .9s ease, box-shadow .9s ease;
+}
+
+.meter.on .meterFill{
+  width: var(--val);
+  box-shadow: 0 10px 26px color-mix(in oklab, var(--accent), transparent 70%);
+}
+
+.meterProof{
+  margin-top:10px;
+  font-size:13px;
+  color: var(--muted);
+  line-height:1.45;
+}
+
+/* ================== Capabilities blocks ================== */
+.cap{
+  border:1px solid var(--border);
+  background: color-mix(in oklab, var(--panel), transparent 0%);
+  border-radius:16px;
+  padding:14px;
+}
+
+.capTop{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.capTitle{
+  font-weight:700;
+}
+
+.capTag{
+  font-size:12px;
+  font-weight:700;
+  color: var(--muted);
+  border:1px solid var(--border);
+  background: rgba(255,255,255,.04);
+  padding:6px 10px;
+  border-radius:999px;
+}
+
+.capBody{
+  margin-top:8px;
+  color: var(--muted);
+  line-height:1.55;
+  font-size:14px;
+}
+
