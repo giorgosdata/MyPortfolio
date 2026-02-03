@@ -57,174 +57,128 @@
           <div class="grid" style="gap:24px; margin-top:24px">
             <!-- Left: meters -->
             <div class="card" style="padding:18px">
-  <div class="skillsHead">
-    <div>
-      <h3 class="card-title">Skills</h3>
-      <p class="card-description" style="margin-top:6px">
-        Categorized + compact, so you can add many without clutter.
-      </p>
+ <section class="section" id="skills-stack">
+  <div class="wrap">
+    <h1 class="title">Skills</h1>
+    <p class="lead">
+      A clean stack view — fast to scan, easy to expand. Click to pin your best ones.
+    </p>
+
+    <div class="skillToolbar">
+      <div class="skillSearch">
+        <span class="skillSearchIcon">⌕</span>
+        <input id="skillSearch" type="text" placeholder="Search skills (e.g. three, python, react)" />
+      </div>
+
+      <div class="skillFilters" id="skillFilters">
+        <button class="filter active" data-filter="all" type="button">All</button>
+        <button class="filter" data-filter="frontend" type="button">Front-end</button>
+        <button class="filter" data-filter="backend" type="button">Back-end</button>
+        <button class="filter" data-filter="3d" type="button">3D / Game</button>
+        <button class="filter" data-filter="lang" type="button">Languages</button>
+        <button class="filter" data-filter="tools" type="button">Tools</button>
+        <button class="filter" data-filter="creative" type="button">Creative</button>
+      </div>
     </div>
 
-    <div class="skillTabs" role="tablist" aria-label="Skill categories">
-      <button class="tab active" data-tab="frontend" type="button">Front-end</button>
-      <button class="tab" data-tab="motion" type="button">Motion</button>
-      <button class="tab" data-tab="three" type="button">3D</button>
-      <button class="tab" data-tab="tools" type="button">Tools</button>
-      <button class="tab" data-tab="ai" type="button">AI</button>
+    <div class="pinnedRow" id="pinnedRow">
+      <div class="pinnedTitle">Pinned</div>
+      <div class="pinnedList" id="pinnedList"></div>
+    </div>
+
+    <div class="skillBento" id="skillBento">
+
+      <!-- FRONT-END -->
+      <article class="skillGroup" data-group="frontend">
+        <div class="skillGroupTop">
+          <h3>Front-end</h3>
+          <span class="skillGroupMeta">UI • Web Apps • Motion</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="HTML" data-tags="html frontend">HTML</button>
+          <button class="chip" data-skill="CSS" data-tags="css frontend">CSS</button>
+          <button class="chip" data-skill="JavaScript" data-tags="javascript js frontend">JavaScript</button>
+          <button class="chip" data-skill="TypeScript" data-tags="typescript ts frontend">TypeScript</button>
+          <button class="chip" data-skill="React.js" data-tags="react reactjs frontend">React.js</button>
+          <button class="chip" data-skill="Next.js" data-tags="next nextjs frontend">Next.js</button>
+          <button class="chip" data-skill="Three.js" data-tags="three threejs webgl 3d frontend">Three.js</button>
+          <button class="chip" data-skill="GSAP" data-tags="gsap motion frontend">GSAP</button>
+        </div>
+      </article>
+
+      <!-- BACK-END -->
+      <article class="skillGroup" data-group="backend">
+        <div class="skillGroupTop">
+          <h3>Back-end</h3>
+          <span class="skillGroupMeta">APIs • Databases</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="FastAPI" data-tags="fastapi python backend api">FastAPI</button>
+          <button class="chip" data-skill="Django" data-tags="django python backend">Django</button>
+          <button class="chip" data-skill="PHP" data-tags="php backend">PHP</button>
+          <button class="chip" data-skill="MySQL" data-tags="mysql database backend">MySQL</button>
+          <button class="chip" data-skill="JSON" data-tags="json backend frontend">JSON</button>
+        </div>
+      </article>
+
+      <!-- LANGUAGES -->
+      <article class="skillGroup" data-group="lang">
+        <div class="skillGroupTop">
+          <h3>Languages</h3>
+          <span class="skillGroupMeta">Programming languages</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="Python" data-tags="python lang backend">Python</button>
+          <button class="chip" data-skill="Java" data-tags="java lang">Java</button>
+          <button class="chip" data-skill="C" data-tags="c lang">C</button>
+          <button class="chip" data-skill="C++" data-tags="cpp c++ lang">C++</button>
+          <button class="chip" data-skill="Lua" data-tags="lua lang roblox">Lua</button>
+        </div>
+      </article>
+
+      <!-- 3D / GAME -->
+      <article class="skillGroup" data-group="3d">
+        <div class="skillGroupTop">
+          <h3>3D / Game</h3>
+          <span class="skillGroupMeta">Engines • Tools • Experiments</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="Blender" data-tags="blender 3d creative">Blender</button>
+          <button class="chip" data-skill="Unreal Engine" data-tags="unreal engine 3d game">Unreal Engine</button>
+          <button class="chip" data-skill="Pygame" data-tags="pygame python game">Pygame</button>
+          <button class="chip" data-skill="Roblox" data-tags="roblox game">Roblox</button>
+        </div>
+      </article>
+
+      <!-- TOOLS -->
+      <article class="skillGroup" data-group="tools">
+        <div class="skillGroupTop">
+          <h3>Automation / Tools</h3>
+          <span class="skillGroupMeta">Workflows • Productivity</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="n8n" data-tags="n8n automation tools">n8n</button>
+          <button class="chip" data-skill="AI Tools" data-tags="ai tools automation">AI Tools</button>
+        </div>
+      </article>
+
+      <!-- CREATIVE -->
+      <article class="skillGroup" data-group="creative">
+        <div class="skillGroupTop">
+          <h3>Creative</h3>
+          <span class="skillGroupMeta">Editing • Content</span>
+        </div>
+        <div class="skillChips">
+          <button class="chip" data-skill="Photo Editing" data-tags="photo editing creative">Photo Editing</button>
+          <button class="chip" data-skill="GIMP" data-tags="gimp photo editing creative">GIMP</button>
+          <button class="chip" data-skill="Video Editing" data-tags="video editing creative">Video Editing</button>
+          <button class="chip" data-skill="Shotcut" data-tags="shotcut video editing creative">Shotcut</button>
+        </div>
+      </article>
+
     </div>
   </div>
-
-  <div class="skillsPanel">
-
-    <!-- FRONTEND -->
-    <div class="skillsGrid active" data-panel="frontend">
-      <div class="skillCard" style="--p:92">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">HTML</span>
-            <span class="skillPct">92%</span>
-          </div>
-          <div class="skillMeta">Semantic • accessibility • clean layout</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:86">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">CSS</span>
-            <span class="skillPct">86%</span>
-          </div>
-          <div class="skillMeta">Responsive • glass UI • modern systems</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:78">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">JavaScript</span>
-            <span class="skillPct">78%</span>
-          </div>
-          <div class="skillMeta">Vanilla apps • state • APIs</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:70">
-        <div class="ring" aria-hidden="true"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">UI / UX</span>
-            <span class="skillPct">70%</span>
-          </div>
-          <div class="skillMeta">Hierarchy • spacing • conversion-first</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MOTION -->
-    <div class="skillsGrid" data-panel="motion">
-      <div class="skillCard" style="--p:72">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">GSAP</span>
-            <span class="skillPct">72%</span>
-          </div>
-          <div class="skillMeta">ScrollTrigger • transitions • counters</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:66">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Micro-interactions</span>
-            <span class="skillPct">66%</span>
-          </div>
-          <div class="skillMeta">hover • easing • reveal systems</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3D -->
-    <div class="skillsGrid" data-panel="three">
-      <div class="skillCard" style="--p:68">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Three.js</span>
-            <span class="skillPct">68%</span>
-          </div>
-          <div class="skillMeta">lighting • particles • perf (DPR)</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:60">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">WebGL basics</span>
-            <span class="skillPct">60%</span>
-          </div>
-          <div class="skillMeta">materials • camera • scene composition</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- TOOLS -->
-    <div class="skillsGrid" data-panel="tools">
-      <div class="skillCard" style="--p:75">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Git / GitHub</span>
-            <span class="skillPct">75%</span>
-          </div>
-          <div class="skillMeta">pages • workflows • versioning</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:68">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Figma</span>
-            <span class="skillPct">68%</span>
-          </div>
-          <div class="skillMeta">layouts • components • prototypes</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- AI -->
-    <div class="skillsGrid" data-panel="ai">
-      <div class="skillCard" style="--p:70">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Automation</span>
-            <span class="skillPct">70%</span>
-          </div>
-          <div class="skillMeta">agents • workflows • integrations</div>
-        </div>
-      </div>
-
-      <div class="skillCard" style="--p:62">
-        <div class="ring"></div>
-        <div class="skillInfo">
-          <div class="skillTop">
-            <span class="skillName">Prompting</span>
-            <span class="skillPct">62%</span>
-          </div>
-          <div class="skillMeta">structured prompts • clarity • outcomes</div>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
+</section>
 
 
             <!-- Right: capability blocks -->
@@ -276,4 +230,5 @@
   <button id="toTop" class="to-top" aria-label="Back to top">↑</button>
 </body>
 </html>
+
 
