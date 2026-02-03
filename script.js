@@ -245,44 +245,80 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-// Skill tabs
+// ===================== Skills Stack: search + filter + pin =====================
 (() => {
-  const tabs = document.querySelectorAll(".tab");
-  const panels = document.querySelectorAll(".skillsGrid");
-  if (!tabs.length || !panels.length) return;
+  const search = document.getElementById("skillSearch");
+  const filters = document.querySelectorAll(".filter");
+  const groups = document.querySelectorAll(".skillGroup");
+  const chips = document.querySelectorAll(".chip");
+  const pinnedList = document.getElementById("pinnedList");
 
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const key = tab.getAttribute("data-tab");
+  if (!search || !filters.length || !groups.length || !chips.length) return;
 
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
+  let activeFilter = "all";
 
-      panels.forEach(p => {
-        p.classList.toggle("active", p.getAttribute("data-panel") === key);
+  function apply() {
+    const q = search.value.trim().toLowerCase();
+
+    groups.forEach(group => {
+      const groupKey = group.getAttribute("data-group");
+      const groupPass = (activeFilter === "all" || activeFilter === groupKey);
+
+      // show/hide chips based on query
+      const groupChips = group.querySelectorAll(".chip");
+      let anyVisible = false;
+
+      groupChips.forEach(chip => {
+        const tags = (chip.getAttribute("data-tags") || "").toLowerCase();
+        const name = (chip.getAttribute("data-skill") || chip.textContent || "").toLowerCase();
+        const match = !q || tags.includes(q) || name.includes(q);
+
+        chip.style.display = (groupPass && match) ? "" : "none";
+        if (groupPass && match) anyVisible = true;
       });
+
+      // hide whole group if nothing visible
+      group.style.display = anyVisible ? "" : "none";
+    });
+  }
+
+  filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+      filters.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = btn.getAttribute("data-filter") || "all";
+      apply();
     });
   });
-})();
 
-// Nice hover tilt (subtle)
-(() => {
-  const cards = document.querySelectorAll(".skillCard");
-  if (!cards.length) return;
+  // click to pin/unpin
+  chips.forEach(chip => {
+    chip.addEventListener("click", () => {
+      const key = chip.getAttribute("data-skill") || chip.textContent.trim();
+      const existing = pinnedList.querySelector(`[data-pin="${CSS.escape(key)}"]`);
 
-  cards.forEach(card => {
-    card.addEventListener("mousemove", (e) => {
-      const r = card.getBoundingClientRect();
-      const x = (e.clientX - r.left) / r.width - 0.5;
-      const y = (e.clientY - r.top) / r.height - 0.5;
-      card.style.transform = `translateY(-4px) rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*5).toFixed(2)}deg)`;
-    });
+      if (existing) {
+        existing.remove();
+        chip.classList.remove("pinned");
+      } else {
+        const pill = document.createElement("button");
+        pill.type = "button";
+        pill.className = "chip pinned";
+        pill.textContent = key;
+        pill.setAttribute("data-pin", key);
+        pill.title = "Click to unpin";
 
-    card.addEventListener("mouseleave", () => {
-      card.style.transform = "";
+        pill.addEventListener("click", () => {
+          pill.remove();
+          chip.classList.remove("pinned");
+        });
+
+        pinnedList.appendChild(pill);
+        chip.classList.add("pinned");
+      }
     });
   });
+
+  search.addEventListener("input", apply);
+  apply();
 })();
-
-
